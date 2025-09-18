@@ -1,0 +1,23 @@
+{
+  "timestamp": "2025-09-08T00:00:46.822Z",
+  "totalIssues": 9,
+  "issues": [
+    "❌ contracts/contracts/UpgradeableMultiStakeManager.sol: Отсутствуют модификаторы",
+    "❌ contracts/contracts/TierWeightManager.sol: Отсутствуют модификаторы",
+    "❌ contracts/contracts/ProxyFactory.sol: Отсутствует ReentrancyGuard",
+    "❌ contracts/contracts/ProxyFactory.sol: Отсутствуют модификаторы",
+    "❌ contracts/contracts/PADNFTFactory.sol: Отсутствует ReentrancyGuard",
+    "❌ contracts/contracts/PADNFTFactory.sol: Отсутствуют модификаторы",
+    "❌ contracts/contracts/VoucherManager.sol: Отсутствуют модификаторы",
+    "❌ lib/wagmi.ts: Отсутствует createConfig",
+    "❌ tailwind.config.ts: Отсутствует TIER_LEVELS"
+  ],
+  "systems": {
+    "contracts": 7,
+    "proxy": 0,
+    "nft": 0,
+    "staking": 0,
+    "frontend": 0,
+    "config": 2
+  }
+}

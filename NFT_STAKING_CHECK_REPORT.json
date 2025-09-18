@@ -1,0 +1,17 @@
+{
+  "timestamp": "2025-09-08T00:01:57.065Z",
+  "allSystemsOK": false,
+  "results": {
+    "nftContract": false,
+    "stakingContract": false,
+    "frontendNFT": false,
+    "frontendStaking": false,
+    "videoFiles": true,
+    "voucherImages": true
+  },
+  "recommendations": [
+    "Исправьте найденные проблемы",
+    "Проведите дополнительное тестирование",
+    "Проверьте все компоненты перед деплоем"
+  ]
+}

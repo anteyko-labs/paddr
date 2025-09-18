@@ -1,0 +1,5 @@
+нс BNB:", ethers.formatEther(balance), "BNB");
+console.log("Бала
+const [signer] = await etheconst balance = await signer.provider.getBalance(signer.address);
+// Проверим баланс BNB
+exit

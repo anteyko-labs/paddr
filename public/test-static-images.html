@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Static NFT Images</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #1a1a1a;
+            color: white;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .nft-card {
+            background: #2a2a2a;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            border: 2px solid #333;
+        }
+        .nft-image {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .tier-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .tier-bronze { color: #CD7F32; }
+        .tier-silver { color: #C0C0C0; }
+        .tier-gold { color: #FFD700; }
+        .tier-platinum { color: #E5E4E2; }
+        .metadata-info {
+            background: #333;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: left;
+        }
+        .metadata-info pre {
+            background: #1a1a1a;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎨 Test Static NFT Images for MetaMask</h1>
+    <p>These are the static PNG images that will appear in MetaMask wallet:</p>
+    
+    <div class="container">
+        <div class="nft-card">
+            <img src="/nft-tiers/bronze-tier.png" alt="Bronze NFT" class="nft-image">
+            <div class="tier-name tier-bronze">Bronze Tier NFT</div>
+            <p>Static PNG for MetaMask wallet</p>
+        </div>
+        
+        <div class="nft-card">
+            <img src="/nft-tiers/silver-tier.png" alt="Silver NFT" class="nft-image">
+            <div class="tier-name tier-silver">Silver Tier NFT</div>
+            <p>Static PNG for MetaMask wallet</p>
+        </div>
+        
+        <div class="nft-card">
+            <img src="/nft-tiers/gold-tier.png" alt="Gold NFT" class="nft-image">
+            <div class="tier-name tier-gold">Gold Tier NFT</div>
+            <p>Static PNG for MetaMask wallet</p>
+        </div>
+        
+        <div class="nft-card">
+            <img src="/nft-tiers/platinum-tier.png" alt="Platinum NFT" class="nft-image">
+            <div class="tier-name tier-platinum">Platinum Tier NFT</div>
+            <p>Static PNG for MetaMask wallet</p>
+        </div>
+    </div>
+
+    <div class="metadata-info">
+        <h3>📋 Metadata Example (Token ID 15):</h3>
+        <button onclick="loadMetadata()">Load Metadata</button>
+        <pre id="metadata"></pre>
+    </div>
+
+    <script>
+        async function loadMetadata() {
+            try {
+                const response = await fetch('/api/nft-metadata/15.json');
+                const metadata = await response.json();
+                document.getElementById('metadata').textContent = JSON.stringify(metadata, null, 2);
+            } catch (error) {
+                document.getElementById('metadata').textContent = 'Error: ' + error.message;
+            }
+        }
+    </script>
+</body>
+</html>

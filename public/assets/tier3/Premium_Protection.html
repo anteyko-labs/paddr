@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Premium Protection</title>
+    <style>
+        body { margin: 0; padding: 20px; background: #1a1a1a; color: white; }
+        canvas { border: 1px solid #333; }
+        button { background: #10b981; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; margin: 10px; }
+        button:hover { background: #059669; }
+    </style>
+</head>
+<body>
+    <h1>Premium Protection - GOLD</h1>
+    <canvas id="canvas" width="400" height="300"></canvas>
+    <br>
+    <button onclick="downloadImage()">📥 Скачать PNG</button>
+    
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Очищаем canvas
+        ctx.clearRect(0, 0, 400, 300);
+        
+        // Фон
+        ctx.fillStyle = '#FFFACD';
+        ctx.fillRect(0, 0, 400, 300);
+        
+        // Градиентный фон
+        const gradient = ctx.createLinearGradient(0, 0, 400, 300);
+        gradient.addColorStop(0, '#FFD700');
+        gradient.addColorStop(1, '#FFF8DC');
+        ctx.fillStyle = gradient;
+        ctx.fillRect(10, 10, 380, 280);
+        
+        // Рамка
+        ctx.strokeStyle = '#FFD700';
+        ctx.lineWidth = 3;
+        ctx.strokeRect(10, 10, 380, 280);
+        
+        // Внутренняя рамка
+        ctx.strokeStyle = '#000000';
+        ctx.lineWidth = 2;
+        ctx.setLineDash([5, 5]);
+        ctx.strokeRect(30, 30, 340, 240);
+        ctx.setLineDash([]);
+        
+        // Заголовок тира
+        ctx.fillStyle = '#000000';
+        ctx.font = 'bold 24px Arial';
+        ctx.textAlign = 'center';
+        ctx.fillText('GOLD TIER', 200, 60);
+        
+        // Название ваучера
+        ctx.font = 'bold 16px Arial';
+        const words = 'Premium Protection'.split(' ');
+        let y = 100;
+        for (let i = 0; i < words.length; i += 2) {
+            const line = words.slice(i, i + 2).join(' ');
+            ctx.fillText(line, 200, y);
+            y += 25;
+        }
+        
+        // Иконка ваучера
+        ctx.fillStyle = '#DC2626';
+        ctx.fillRect(150, 140, 100, 80);
+        ctx.fillStyle = 'white';
+        ctx.font = 'bold 18px Arial';
+        ctx.fillText('VOUCHER', 200, 185);
+        
+        // Информация
+        ctx.fillStyle = '#000000';
+        ctx.font = '14px Arial';
+        ctx.fillText('Digital Voucher', 200, 240);
+        ctx.font = '12px Arial';
+        ctx.fillText('Generated from PDF', 200, 260);
+        
+        // Декоративные элементы
+        ctx.fillStyle = '#FFD700';
+        ctx.globalAlpha = 0.3;
+        ctx.beginPath();
+        ctx.arc(50, 50, 20, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        ctx.beginPath();
+        ctx.arc(350, 250, 15, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        ctx.fillRect(30, 250, 40, 20);
+        ctx.fillRect(330, 30, 40, 20);
+        
+        ctx.globalAlpha = 1;
+        
+        function downloadImage() {
+            const link = document.createElement('a');
+            link.download = 'Premium_Protection.png';
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+        
+        // Автоматически скачиваем через 2 секунды
+        setTimeout(downloadImage, 2000);
+    </script>
+</body>
+</html>

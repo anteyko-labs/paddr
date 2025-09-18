@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voucher Images Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #1a1a1a; color: white; }
+        .tier { margin: 20px 0; }
+        .tier h2 { color: #10b981; }
+        .vouchers { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .voucher { border: 1px solid #374151; border-radius: 8px; padding: 10px; background: #111827; }
+        .voucher img { width: 100%; height: 150px; object-fit: cover; border-radius: 4px; }
+        .voucher h3 { margin: 10px 0 5px 0; color: #10b981; font-size: 14px; }
+        .voucher p { margin: 0; color: #9ca3af; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <h1>🎫 Тест изображений ваучеров</h1>
+    
+    <div class="tier">
+        <h2>🥉 Bronze Tier</h2>
+        <div class="vouchers">
+            <div class="voucher">
+                <img src="/assets/tier1/1 hour Free Rental Voucher.svg" alt="1 hour Free Rental Voucher">
+                <h3>1 hour Free Rental Voucher</h3>
+                <p>1 hour free rental when renting for 1 day or more</p>
+            </div>
+            <div class="voucher">
+                <img src="/assets/tier1/10% Restaurant Discount.svg" alt="10% Restaurant Discount">
+                <h3>10% Restaurant Discount</h3>
+                <p>10% discount at restaurant</p>
+            </div>
+            <div class="voucher">
+                <img src="/assets/tier1/10% Auto Service Discount.svg" alt="10% Auto Service Discount">
+                <h3>10% Auto Service Discount</h3>
+                <p>10% discount at auto service</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="tier">
+        <h2>🥈 Silver Tier</h2>
+        <div class="vouchers">
+            <div class="voucher">
+                <img src="/assets/tier2/2 hours Free Rental Voucher.svg" alt="2 hours Free Rental Voucher">
+                <h3>2 hours Free Rental Voucher</h3>
+                <p>2 hours free rental when renting for 1 day or more</p>
+            </div>
+            <div class="voucher">
+                <img src="/assets/tier2/150$ Rental Voucher.svg" alt="150$ Rental Voucher">
+                <h3>150$ Rental Voucher</h3>
+                <p>1x $150 car rental coupon</p>
+            </div>
+            <div class="voucher">
+                <img src="/assets/tier2/15% Auto Service Discount.svg" alt="15% Auto Service Discount">
+                <h3>15% Auto Service Discount</h3>
+                <p>15% discount at auto service</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="tier">
+        <h2>🥇 Gold Tier</h2>
+        <div class="vouchers">
+            <div class="voucher">
+                <img src="/assets/tier3/3 hours Free Rental Voucher.svg" alt="3 hours Free Rental Voucher">
+                <h3>3 hours Free Rental Voucher</h3>
+                <p>3 hours free rental when renting for 1 day or more</p>
+            </div>
+            <div class="voucher">
+                <img src="/assets/tier3/600$ Rental Voucher.svg" alt="600$ Rental Voucher">
+                <h3>600$ Rental Voucher</h3>
+                <p>1x $600 car rental coupon</p>
+            </div>
+            <div class="voucher">
+                <img src="/assets/tier3/20% Auto Service Discount.svg" alt="20% Auto Service Discount">
+                <h3>20% Auto Service Discount</h3>
+                <p>20% discount at auto service</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="tier">
+        <h2>💎 Platinum Tier</h2>
+        <div class="vouchers">
+            <div class="voucher">
+                <img src="/assets/tier4/5 hours Free Rental Voucher.svg" alt="5 hours Free Rental Voucher">
+                <h3>5 hours Free Rental Voucher</h3>
+                <p>5 hours free rental when renting for 1 day or more</p>
+            </div>
+            <div class="voucher">
+                <img src="/assets/tier4/1250$ Rental Voucher.svg" alt="1250$ Rental Voucher">
+                <h3>1250$ Rental Voucher</h3>
+                <p>1x $1250 car rental coupon</p>
+            </div>
+            <div class="voucher">
+                <img src="/assets/tier4/Chauffeur Service Voucher (6h).svg" alt="Chauffeur Service Voucher (6h)">
+                <h3>Chauffeur Service Voucher (6h)</h3>
+                <p>6 hours chauffeur service</p>
+            </div>
+        </div>
+    </div>
+    
+    <div style="margin-top: 40px; padding: 20px; background: #111827; border-radius: 8px;">
+        <h3>📋 Инструкции по тестированию:</h3>
+        <ol>
+            <li>Запустите приложение: <code>npm run dev</code></li>
+            <li>Откройте эту страницу: <code>http://localhost:3000/test-vouchers.html</code></li>
+            <li>Проверьте что все изображения отображаются корректно</li>
+            <li>Проверьте админ панель: <code>http://localhost:3000/admin</code></li>
+            <li>Проверьте NFT отображение: <code>http://localhost:3000/dashboard/rewards</code></li>
+        </ol>
+    </div>
+</body>
+</html>

@@ -1,0 +1,319 @@
+{
+  "tiers": [
+    {
+      "id": 0,
+      "name": "Bronze",
+      "amount": 500,
+      "duration": 1,
+      "rewardRate": 100,
+      "nftMultiplier": 1,
+      "isActive": false,
+      "vouchers": [
+        {
+          "id": "1",
+          "name": "5% Discount",
+          "description": "5% discount when paying for car rental with PADD-R tokens",
+          "value": "5%",
+          "type": "SINGLE_USE"
+        },
+        {
+          "id": "2",
+          "name": "Free Rental Hour",
+          "description": "1 hour free rental when renting for 1 day or more",
+          "value": "1 hour",
+          "type": "SINGLE_USE"
+        },
+        {
+          "id": "3",
+          "name": "Rental Coupon",
+          "description": "1x $50 car rental coupon",
+          "value": "$50",
+          "type": "SINGLE_USE"
+        },
+        {
+          "id": "4",
+          "name": "Restaurant Discount",
+          "description": "10% discount at restaurant",
+          "value": "10%",
+          "type": "DURATION"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Silver",
+      "amount": 1000,
+      "duration": 2,
+      "rewardRate": 200,
+      "nftMultiplier": 1,
+      "isActive": true,
+      "vouchers": [
+        {
+          "id": "5",
+          "name": "5% Discount",
+          "description": "5% discount when paying for car rental with PADD-R tokens",
+          "value": "5%",
+          "type": "SINGLE_USE"
+        },
+        {
+          "id": "6",
+          "name": "Free Rental Hours",
+          "description": "2 hours free rental when renting for 1 day or more",
+          "value": "2 hours",
+          "type": "SINGLE_USE"
+        },
+        {
+          "id": "7",
+          "name": "Rental Coupons",
+          "description": "3x $150 car rental coupons",
+          "value": "$150",
+          "type": "MULTI_USE",
+          "maxUses": 3
+        },
+        {
+          "id": "8",
+          "name": "Auto Service Discount",
+          "description": "15% discount at auto service",
+          "value": "15%",
+          "type": "DURATION"
+        },
+        {
+          "id": "9",
+          "name": "Restaurant Discount",
+          "description": "10% discount at restaurant",
+          "value": "10%",
+          "type": "DURATION"
+        },
+        {
+          "id": "10",
+          "name": "Car Wash",
+          "description": "Free car wash",
+          "value": "Free",
+          "type": "SINGLE_USE"
+        },
+        {
+          "id": "11",
+          "name": "Priority Booking",
+          "description": "Priority booking for rentals",
+          "value": "Priority",
+          "type": "DURATION"
+        },
+        {
+          "id": "12",
+          "name": "Car Upgrade",
+          "description": "Free car upgrade",
+          "value": "Upgrade",
+          "type": "SINGLE_USE"
+        },
+        {
+          "id": "13",
+          "name": "Lamborghini Rental",
+          "description": "1 day rental of Lamborghini Huracan EVO",
+          "value": "1 day",
+          "type": "SINGLE_USE"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Gold",
+      "amount": 2500,
+      "duration": 3,
+      "rewardRate": 300,
+      "nftMultiplier": 1,
+      "isActive": true,
+      "vouchers": [
+        {
+          "id": "14",
+          "name": "5% Discount",
+          "description": "5% discount when paying for car rental with PADD-R tokens",
+          "value": "5%",
+          "type": "SINGLE_USE"
+        },
+        {
+          "id": "15",
+          "name": "Free Rental Hours",
+          "description": "3 hours free rental when renting for 1 day or more",
+          "value": "3 hours",
+          "type": "SINGLE_USE"
+        },
+        {
+          "id": "16",
+          "name": "Rental Coupons",
+          "description": "6x $600 car rental coupons",
+          "value": "$600",
+          "type": "MULTI_USE",
+          "maxUses": 6
+        },
+        {
+          "id": "17",
+          "name": "Auto Service Discount",
+          "description": "20% discount at auto service",
+          "value": "20%",
+          "type": "DURATION"
+        },
+        {
+          "id": "18",
+          "name": "Restaurant Discount",
+          "description": "15% discount at restaurant",
+          "value": "15%",
+          "type": "DURATION"
+        },
+        {
+          "id": "19",
+          "name": "Unlimited Mileage",
+          "description": "Unlimited mileage on rentals",
+          "value": "Unlimited",
+          "type": "DURATION"
+        },
+        {
+          "id": "20",
+          "name": "Premium Protection",
+          "description": "Premium protection included",
+          "value": "Premium",
+          "type": "DURATION"
+        },
+        {
+          "id": "21",
+          "name": "Priority Booking",
+          "description": "Priority booking for rentals",
+          "value": "Priority",
+          "type": "DURATION"
+        },
+        {
+          "id": "22",
+          "name": "Car Upgrade",
+          "description": "Free car upgrade",
+          "value": "Upgrade",
+          "type": "SINGLE_USE"
+        },
+        {
+          "id": "23",
+          "name": "Lamborghini Rental",
+          "description": "1 day rental of Lamborghini Huracan EVO",
+          "value": "1 day",
+          "type": "SINGLE_USE"
+        },
+        {
+          "id": "24",
+          "name": "Weekend Package",
+          "description": "Weekend with car and 5-star hotel stay",
+          "value": "Weekend",
+          "type": "SINGLE_USE"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Platinum",
+      "amount": 4000,
+      "duration": 4,
+      "rewardRate": 400,
+      "nftMultiplier": 1,
+      "isActive": true,
+      "vouchers": [
+        {
+          "id": "25",
+          "name": "5% Discount",
+          "description": "5% discount when paying for car rental with PADD-R tokens",
+          "value": "5%",
+          "type": "SINGLE_USE"
+        },
+        {
+          "id": "26",
+          "name": "Free Rental Hours",
+          "description": "5 hours free rental when renting for 1 day or more",
+          "value": "5 hours",
+          "type": "SINGLE_USE"
+        },
+        {
+          "id": "27",
+          "name": "Rental Coupons",
+          "description": "12x $1250 car rental coupons",
+          "value": "$1250",
+          "type": "MULTI_USE",
+          "maxUses": 12
+        },
+        {
+          "id": "28",
+          "name": "Auto Service Discount",
+          "description": "30% discount at auto service",
+          "value": "30%",
+          "type": "DURATION"
+        },
+        {
+          "id": "29",
+          "name": "Restaurant Discount",
+          "description": "20% discount at restaurant",
+          "value": "20%",
+          "type": "DURATION"
+        },
+        {
+          "id": "30",
+          "name": "Unlimited Mileage",
+          "description": "Unlimited mileage on rentals",
+          "value": "Unlimited",
+          "type": "DURATION"
+        },
+        {
+          "id": "31",
+          "name": "Premium Protection",
+          "description": "Premium protection included",
+          "value": "Premium",
+          "type": "DURATION"
+        },
+        {
+          "id": "32",
+          "name": "Priority Booking",
+          "description": "Priority booking for rentals",
+          "value": "Priority",
+          "type": "DURATION"
+        },
+        {
+          "id": "33",
+          "name": "Car Upgrade",
+          "description": "Free car upgrade",
+          "value": "Upgrade",
+          "type": "SINGLE_USE"
+        },
+        {
+          "id": "34",
+          "name": "Chauffeur Service",
+          "description": "6 hours chauffeur service",
+          "value": "6 hours",
+          "type": "SINGLE_USE"
+        },
+        {
+          "id": "35",
+          "name": "Free UAE Delivery",
+          "description": "Free delivery in UAE",
+          "value": "Free",
+          "type": "SINGLE_USE"
+        },
+        {
+          "id": "36",
+          "name": "Lamborghini Rental",
+          "description": "1 day rental of Lamborghini Huracan EVO",
+          "value": "1 day",
+          "type": "SINGLE_USE"
+        },
+        {
+          "id": "37",
+          "name": "Weekend Package",
+          "description": "Weekend with car and 5-star hotel stay",
+          "value": "Weekend",
+          "type": "SINGLE_USE"
+        },
+        {
+          "id": "38",
+          "name": "Yacht Trip",
+          "description": "Yacht trip or private tour of the Emirates",
+          "value": "Yacht/Tour",
+          "type": "SINGLE_USE"
+        }
+      ]
+    }
+  ],
+  "version": 5,
+  "lastUpdated": "2025-09-09T20:37:07.752Z"
+}

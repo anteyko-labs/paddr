@@ -1,0 +1,11 @@
+{
+  "mapping": {
+    "video5307504616261323179.mp4": "Silver",
+    "video5307504616261323180.mp4": "Platinum",
+    "video5307504616261323181.mp4": "Gold",
+    "video5307504616261323182.mp4": "Bronze"
+  },
+  "description": "Правильное сопоставление видео с тирами",
+  "note": "79=Silver, 80=Platinum, 81=Gold, 82=Bronze",
+  "lastUpdated": "2025-09-07T23:26:44.880Z"
+}

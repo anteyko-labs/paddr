@@ -1,0 +1,305 @@
+{
+  "tiers": {
+    "BRONZE": {
+      "name": "BRONZE",
+      "vouchers": [
+        {
+          "id": "bronze_1",
+          "name": "1 hour Free Rental Voucher-1",
+          "description": "Voucher: 1 hour Free Rental Voucher-1",
+          "value": "1hour",
+          "type": "SINGLE_USE",
+          "image": "1 hour Free Rental Voucher-1.png",
+          "pdf": "1 hour Free Rental Voucher-1.pdf"
+        },
+        {
+          "id": "bronze_2",
+          "name": "1 hour Free Rental Voucher",
+          "description": "Voucher: 1 hour Free Rental Voucher",
+          "value": "1hour",
+          "type": "SINGLE_USE",
+          "image": "1 hour Free Rental Voucher.png",
+          "pdf": "1 hour Free Rental Voucher.pdf"
+        },
+        {
+          "id": "bronze_3",
+          "name": "10% Auto Service Discount",
+          "description": "Voucher: 10% Auto Service Discount",
+          "value": "10%",
+          "type": "DURATION",
+          "image": "10% Auto Service Discount.png",
+          "pdf": "10% Auto Service Discount.pdf"
+        },
+        {
+          "id": "bronze_4",
+          "name": "10% Restaurant Discount",
+          "description": "Voucher: 10% Restaurant Discount",
+          "value": "10%",
+          "type": "DURATION",
+          "image": "10% Restaurant Discount.png",
+          "pdf": "10% Restaurant Discount.pdf"
+        }
+      ]
+    },
+    "SILVER": {
+      "name": "SILVER",
+      "vouchers": [
+        {
+          "id": "silver_1",
+          "name": "10% Restaurant Discount",
+          "description": "Voucher: 10% Restaurant Discount",
+          "value": "10%",
+          "type": "DURATION",
+          "image": "10% Restaurant Discount.png",
+          "pdf": "10% Restaurant Discount.pdf"
+        },
+        {
+          "id": "silver_2",
+          "name": "15% Auto Service Discount",
+          "description": "Voucher: 15% Auto Service Discount",
+          "value": "15%",
+          "type": "DURATION",
+          "image": "15% Auto Service Discount.png",
+          "pdf": "15% Auto Service Discount.pdf"
+        },
+        {
+          "id": "silver_3",
+          "name": "150$ Rental Voucher",
+          "description": "Voucher: 150$ Rental Voucher",
+          "value": "150$",
+          "type": "MULTI_USE",
+          "image": "150$ Rental Voucher.png",
+          "pdf": "150$ Rental Voucher.pdf"
+        },
+        {
+          "id": "silver_4",
+          "name": "2 hours Free Rental Voucher",
+          "description": "Voucher: 2 hours Free Rental Voucher",
+          "value": "2hour",
+          "type": "SINGLE_USE",
+          "image": "2 hours Free Rental Voucher.png",
+          "pdf": "2 hours Free Rental Voucher.pdf"
+        },
+        {
+          "id": "silver_5",
+          "name": "Frame 1686560875",
+          "description": "Voucher: Frame 1686560875",
+          "value": "Special",
+          "type": "SINGLE_USE",
+          "image": "Frame 1686560875.png",
+          "pdf": "Frame 1686560875.pdf"
+        },
+        {
+          "id": "silver_6",
+          "name": "Free Car Wash Voucher",
+          "description": "Voucher: Free Car Wash Voucher",
+          "value": "Free",
+          "type": "SINGLE_USE",
+          "image": "Free Car Wash Voucher.png",
+          "pdf": "Free Car Wash Voucher.pdf"
+        },
+        {
+          "id": "silver_7",
+          "name": "Free Upgrade Voucher",
+          "description": "Voucher: Free Upgrade Voucher",
+          "value": "Free",
+          "type": "SINGLE_USE",
+          "image": "Free Upgrade Voucher.png",
+          "pdf": "Free Upgrade Voucher.pdf"
+        }
+      ]
+    },
+    "GOLD": {
+      "name": "GOLD",
+      "vouchers": [
+        {
+          "id": "gold_1",
+          "name": "15% Restaurant Discount",
+          "description": "Voucher: 15% Restaurant Discount",
+          "value": "15%",
+          "type": "DURATION",
+          "image": "15% Restaurant Discount.png",
+          "pdf": "15% Restaurant Discount.pdf"
+        },
+        {
+          "id": "gold_2",
+          "name": "20% Auto Service Discount",
+          "description": "Voucher: 20% Auto Service Discount",
+          "value": "20%",
+          "type": "DURATION",
+          "image": "20% Auto Service Discount.png",
+          "pdf": "20% Auto Service Discount.pdf"
+        },
+        {
+          "id": "gold_3",
+          "name": "3 hours Free Rental Voucher",
+          "description": "Voucher: 3 hours Free Rental Voucher",
+          "value": "3hour",
+          "type": "SINGLE_USE",
+          "image": "3 hours Free Rental Voucher.png",
+          "pdf": "3 hours Free Rental Voucher.pdf"
+        },
+        {
+          "id": "gold_4",
+          "name": "600$ Rental Voucher",
+          "description": "Voucher: 600$ Rental Voucher",
+          "value": "600$",
+          "type": "MULTI_USE",
+          "image": "600$ Rental Voucher.png",
+          "pdf": "600$ Rental Voucher.pdf"
+        },
+        {
+          "id": "gold_5",
+          "name": "Frame 1686560876",
+          "description": "Voucher: Frame 1686560876",
+          "value": "Special",
+          "type": "SINGLE_USE",
+          "image": "Frame 1686560876.png",
+          "pdf": "Frame 1686560876.pdf"
+        },
+        {
+          "id": "gold_6",
+          "name": "Free Car Wash Voucher",
+          "description": "Voucher: Free Car Wash Voucher",
+          "value": "Free",
+          "type": "SINGLE_USE",
+          "image": "Free Car Wash Voucher.png",
+          "pdf": "Free Car Wash Voucher.pdf"
+        },
+        {
+          "id": "gold_7",
+          "name": "Free Upgrade Voucher",
+          "description": "Voucher: Free Upgrade Voucher",
+          "value": "Free",
+          "type": "SINGLE_USE",
+          "image": "Free Upgrade Voucher.png",
+          "pdf": "Free Upgrade Voucher.pdf"
+        },
+        {
+          "id": "gold_8",
+          "name": "Premium Protection",
+          "description": "Voucher: Premium Protection",
+          "value": "Premium",
+          "type": "DURATION",
+          "image": "Premium Protection.png",
+          "pdf": "Premium Protection.pdf"
+        },
+        {
+          "id": "gold_9",
+          "name": "Unlimited Mileage",
+          "description": "Voucher: Unlimited Mileage",
+          "value": "Unlimited",
+          "type": "DURATION",
+          "image": "Unlimited Mileage.png",
+          "pdf": "Unlimited Mileage.pdf"
+        }
+      ]
+    },
+    "PLATINUM": {
+      "name": "PLATINUM",
+      "vouchers": [
+        {
+          "id": "platinum_1",
+          "name": "1250$ Rental Voucher",
+          "description": "Voucher: 1250$ Rental Voucher",
+          "value": "1250$",
+          "type": "MULTI_USE",
+          "image": "1250$ Rental Voucher.png",
+          "pdf": "1250$ Rental Voucher.pdf"
+        },
+        {
+          "id": "platinum_2",
+          "name": "20% Auto Service Discount",
+          "description": "Voucher: 20% Auto Service Discount",
+          "value": "20%",
+          "type": "DURATION",
+          "image": "20% Auto Service Discount.png",
+          "pdf": "20% Auto Service Discount.pdf"
+        },
+        {
+          "id": "platinum_3",
+          "name": "20% Restaurant Discount",
+          "description": "Voucher: 20% Restaurant Discount",
+          "value": "20%",
+          "type": "DURATION",
+          "image": "20% Restaurant Discount.png",
+          "pdf": "20% Restaurant Discount.pdf"
+        },
+        {
+          "id": "platinum_4",
+          "name": "5 hours Free Rental Voucher",
+          "description": "Voucher: 5 hours Free Rental Voucher",
+          "value": "5hour",
+          "type": "SINGLE_USE",
+          "image": "5 hours Free Rental Voucher.png",
+          "pdf": "5 hours Free Rental Voucher.pdf"
+        },
+        {
+          "id": "platinum_5",
+          "name": "Chauffeur Service Voucher (6h)",
+          "description": "Voucher: Chauffeur Service Voucher (6h)",
+          "value": "Special",
+          "type": "SINGLE_USE",
+          "image": "Chauffeur Service Voucher (6h).png",
+          "pdf": "Chauffeur Service Voucher (6h).pdf"
+        },
+        {
+          "id": "platinum_6",
+          "name": "Frame 1686560878",
+          "description": "Voucher: Frame 1686560878",
+          "value": "Special",
+          "type": "SINGLE_USE",
+          "image": "Frame 1686560878.png",
+          "pdf": "Frame 1686560878.pdf"
+        },
+        {
+          "id": "platinum_7",
+          "name": "Free Car Wash Voucher",
+          "description": "Voucher: Free Car Wash Voucher",
+          "value": "Free",
+          "type": "SINGLE_USE",
+          "image": "Free Car Wash Voucher.png",
+          "pdf": "Free Car Wash Voucher.pdf"
+        },
+        {
+          "id": "platinum_8",
+          "name": "Free UAE Delivery Voucher",
+          "description": "Voucher: Free UAE Delivery Voucher",
+          "value": "Free",
+          "type": "SINGLE_USE",
+          "image": "Free UAE Delivery Voucher.png",
+          "pdf": "Free UAE Delivery Voucher.pdf"
+        },
+        {
+          "id": "platinum_9",
+          "name": "Free Upgrade Voucher",
+          "description": "Voucher: Free Upgrade Voucher",
+          "value": "Free",
+          "type": "SINGLE_USE",
+          "image": "Free Upgrade Voucher.png",
+          "pdf": "Free Upgrade Voucher.pdf"
+        },
+        {
+          "id": "platinum_10",
+          "name": "Premium Protection",
+          "description": "Voucher: Premium Protection",
+          "value": "Premium",
+          "type": "DURATION",
+          "image": "Premium Protection.png",
+          "pdf": "Premium Protection.pdf"
+        },
+        {
+          "id": "platinum_11",
+          "name": "Unlimited Mileage",
+          "description": "Voucher: Unlimited Mileage",
+          "value": "Unlimited",
+          "type": "DURATION",
+          "image": "Unlimited Mileage.png",
+          "pdf": "Unlimited Mileage.pdf"
+        }
+      ]
+    }
+  },
+  "version": 1,
+  "lastUpdated": "2025-09-07T23:26:44.874Z"
+}

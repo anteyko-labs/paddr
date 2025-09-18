@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Master Voucher Image Generator</title>
+    <style>
+        body { margin: 0; padding: 20px; background: #1a1a1a; color: white; font-family: Arial, sans-serif; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .tier-section { margin: 30px 0; }
+        .tier-title { color: #10b981; font-size: 24px; margin-bottom: 20px; }
+        .voucher-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .voucher-card { border: 1px solid #374151; border-radius: 8px; padding: 15px; background: #111827; }
+        .voucher-card h3 { color: #10b981; margin: 0 0 10px 0; }
+        .voucher-card p { color: #9ca3af; margin: 5px 0; }
+        button { background: #10b981; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; margin: 5px; }
+        button:hover { background: #059669; }
+        .controls { margin: 20px 0; padding: 20px; background: #111827; border-radius: 8px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Мастер-генератор изображений ваучеров</h1>
+        
+        <div class="controls">
+            <h3>📋 Инструкция:</h3>
+            <ol>
+                <li>Нажмите "🚀 Создать все изображения"</li>
+                <li>Откроются все автогенераторы в новых вкладках</li>
+                <li>Каждый автогенератор автоматически создаст и скачает PNG</li>
+                <li>Сохраните все PNG файлы в соответствующие папки</li>
+            </ol>
+            <button onclick="generateAll()">🚀 Создать все изображения (31 файл)</button>
+            <button onclick="generateByTier('BRONZE')">🥉 Создать Bronze (4 файла)</button>
+            <button onclick="generateByTier('SILVER')">🥈 Создать Silver (7 файлов)</button>
+            <button onclick="generateByTier('GOLD')">🥇 Создать Gold (9 файлов)</button>
+            <button onclick="generateByTier('PLATINUM')">💎 Создать Platinum (11 файлов)</button>
+        </div>
+
+        <div class="tier-section">
+            <h2 class="tier-title">🥉 BRONZE TIER</h2>
+            <div class="voucher-grid">
+                <div class="voucher-card">
+                    <h3>1 hour Free Rental Voucher</h3>
+                    <p>Автогенератор: 1_hour_Free_Rental_Voucher_auto_generator.html</p>
+                    <button onclick="openGenerator('tier1', '1_hour_Free_Rental_Voucher_auto_generator.html')">🎨 Создать</button>
+                </div>
+                <div class="voucher-card">
+                    <h3>1 hour Free Rental Voucher-1</h3>
+                    <p>Автогенератор: 1_hour_Free_Rental_Voucher_1_auto_generator.html</p>
+                    <button onclick="openGenerator('tier1', '1_hour_Free_Rental_Voucher_1_auto_generator.html')">🎨 Создать</button>
+                </div>
+                <div class="voucher-card">
+                    <h3>10% Restaurant Discount</h3>
+                    <p>Автогенератор: 10__Restaurant_Discount_auto_generator.html</p>
+                    <button onclick="openGenerator('tier1', '10__Restaurant_Discount_auto_generator.html')">🎨 Создать</button>
+                </div>
+                <div class="voucher-card">
+                    <h3>10% Auto Service Discount</h3>
+                    <p>Автогенератор: 10__Auto_Service_Discount_auto_generator.html</p>
+                    <button onclick="openGenerator('tier1', '10__Auto_Service_Discount_auto_generator.html')">🎨 Создать</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="tier-section">
+            <h2 class="tier-title">🥈 SILVER TIER</h2>
+            <div class="voucher-grid">
+                <div class="voucher-card">
+                    <h3>2 hours Free Rental Voucher</h3>
+                    <p>Автогенератор: 2_hours_Free_Rental_Voucher_auto_generator.html</p>
+                    <button onclick="openGenerator('tier2', '2_hours_Free_Rental_Voucher_auto_generator.html')">🎨 Создать</button>
+                </div>
+                <div class="voucher-card">
+                    <h3>150$ Rental Voucher</h3>
+                    <p>Автогенератор: 150__Rental_Voucher_auto_generator.html</p>
+                    <button onclick="openGenerator('tier2', '150__Rental_Voucher_auto_generator.html')">🎨 Создать</button>
+                </div>
+                <div class="voucher-card">
+                    <h3>15% Auto Service Discount</h3>
+                    <p>Автогенератор: 15__Auto_Service_Discount_auto_generator.html</p>
+                    <button onclick="openGenerator('tier2', '15__Auto_Service_Discount_auto_generator.html')">🎨 Создать</button>
+                </div>
+                <div class="voucher-card">
+                    <h3>10% Restaurant Discount</h3>
+                    <p>Автогенератор: 10__Restaurant_Discount_auto_generator.html</p>
+                    <button onclick="openGenerator('tier2', '10__Restaurant_Discount_auto_generator.html')">🎨 Создать</button>
+                </div>
+                <div class="voucher-card">
+                    <h3>Free Car Wash Voucher</h3>
+                    <p>Автогенератор: Free_Car_Wash_Voucher_auto_generator.html</p>
+                    <button onclick="openGenerator('tier2', 'Free_Car_Wash_Voucher_auto_generator.html')">🎨 Создать</button>
+                </div>
+                <div class="voucher-card">
+                    <h3>Free Upgrade Voucher</h3>
+                    <p>Автогенератор: Free_Upgrade_Voucher_auto_generator.html</p>
+                    <button onclick="openGenerator('tier2', 'Free_Upgrade_Voucher_auto_generator.html')">🎨 Создать</button>
+                </div>
+                <div class="voucher-card">
+                    <h3>Frame 1686560875</h3>
+                    <p>Автогенератор: Frame_1686560875_auto_generator.html</p>
+                    <button onclick="openGenerator('tier2', 'Frame_1686560875_auto_generator.html')">🎨 Создать</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="tier-section">
+            <h2 class="tier-title">🥇 GOLD TIER</h2>
+            <div class="voucher-grid">
+                <div class="voucher-card">
+                    <h3>3 hours Free Rental Voucher</h3>
+                    <p>Автогенератор: 3_hours_Free_Rental_Voucher_auto_generator.html</p>
+                    <button onclick="openGenerator('tier3', '3_hours_Free_Rental_Voucher_auto_generator.html')">🎨 Создать</button>
+                </div>
+                <div class="voucher-card">
+                    <h3>600$ Rental Voucher</h3>
+                    <p>Автогенератор: 600__Rental_Voucher_auto_generator.html</p>
+                    <button onclick="openGenerator('tier3', '600__Rental_Voucher_auto_generator.html')">🎨 Создать</button>
+                </div>
+                <div class="voucher-card">
+                    <h3>20% Auto Service Discount</h3>
+                    <p>Автогенератор: 20__Auto_Service_Discount_auto_generator.html</p>
+                    <button onclick="openGenerator('tier3', '20__Auto_Service_Discount_auto_generator.html')">🎨 Создать</button>
+                </div>
+                <div class="voucher-card">
+                    <h3>15% Restaurant Discount</h3>
+                    <p>Автогенератор: 15__Restaurant_Discount_auto_generator.html</p>
+                    <button onclick="openGenerator('tier3', '15__Restaurant_Discount_auto_generator.html')">🎨 Создать</button>
+                </div>
+                <div class="voucher-card">
+                    <h3>Unlimited Mileage</h3>
+                    <p>Автогенератор: Unlimited_Mileage_auto_generator.html</p>
+                    <button onclick="openGenerator('tier3', 'Unlimited_Mileage_auto_generator.html')">🎨 Создать</button>
+                </div>
+                <div class="voucher-card">
+                    <h3>Premium Protection</h3>
+                    <p>Автогенератор: Premium_Protection_auto_generator.html</p>
+                    <button onclick="openGenerator('tier3', 'Premium_Protection_auto_generator.html')">🎨 Создать</button>
+                </div>
+                <div class="voucher-card">
+                    <h3>Free Car Wash Voucher</h3>
+                    <p>Автогенератор: Free_Car_Wash_Voucher_auto_generator.html</p>
+                    <button onclick="openGenerator('tier3', 'Free_Car_Wash_Voucher_auto_generator.html')">🎨 Создать</button>
+                </div>
+                <div class="voucher-card">
+                    <h3>Free Upgrade Voucher</h3>
+                    <p>Автогенератор: Free_Upgrade_Voucher_auto_generator.html</p>
+                    <button onclick="openGenerator('tier3', 'Free_Upgrade_Voucher_auto_generator.html')">🎨 Создать</button>
+                </div>
+                <div class="voucher-card">
+                    <h3>Frame 1686560876</h3>
+                    <p>Автогенератор: Frame_1686560876_auto_generator.html</p>
+                    <button onclick="openGenerator('tier3', 'Frame_1686560876_auto_generator.html')">🎨 Создать</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="tier-section">
+            <h2 class="tier-title">💎 PLATINUM TIER</h2>
+            <div class="voucher-grid">
+                <div class="voucher-card">
+                    <h3>5 hours Free Rental Voucher</h3>
+                    <p>Автогенератор: 5_hours_Free_Rental_Voucher_auto_generator.html</p>
+                    <button onclick="openGenerator('tier4', '5_hours_Free_Rental_Voucher_auto_generator.html')">🎨 Создать</button>
+                </div>
+                <div class="voucher-card">
+                    <h3>1250$ Rental Voucher</h3>
+                    <p>Автогенератор: 1250__Rental_Voucher_auto_generator.html</p>
+                    <button onclick="openGenerator('tier4', '1250__Rental_Voucher_auto_generator.html')">🎨 Создать</button>
+                </div>
+                <div class="voucher-card">
+                    <h3>20% Auto Service Discount</h3>
+                    <p>Автогенератор: 20__Auto_Service_Discount_auto_generator.html</p>
+                    <button onclick="openGenerator('tier4', '20__Auto_Service_Discount_auto_generator.html')">🎨 Создать</button>
+                </div>
+                <div class="voucher-card">
+                    <h3>20% Restaurant Discount</h3>
+                    <p>Автогенератор: 20__Restaurant_Discount_auto_generator.html</p>
+                    <button onclick="openGenerator('tier4', '20__Restaurant_Discount_auto_generator.html')">🎨 Создать</button>
+                </div>
+                <div class="voucher-card">
+                    <h3>Unlimited Mileage</h3>
+                    <p>Автогенератор: Unlimited_Mileage_auto_generator.html</p>
+                    <button onclick="openGenerator('tier4', 'Unlimited_Mileage_auto_generator.html')">🎨 Создать</button>
+                </div>
+                <div class="voucher-card">
+                    <h3>Premium Protection</h3>
+                    <p>Автогенератор: Premium_Protection_auto_generator.html</p>
+                    <button onclick="openGenerator('tier4', 'Premium_Protection_auto_generator.html')">🎨 Создать</button>
+                </div>
+                <div class="voucher-card">
+                    <h3>Free Car Wash Voucher</h3>
+                    <p>Автогенератор: Free_Car_Wash_Voucher_auto_generator.html</p>
+                    <button onclick="openGenerator('tier4', 'Free_Car_Wash_Voucher_auto_generator.html')">🎨 Создать</button>
+                </div>
+                <div class="voucher-card">
+                    <h3>Free Upgrade Voucher</h3>
+                    <p>Автогенератор: Free_Upgrade_Voucher_auto_generator.html</p>
+                    <button onclick="openGenerator('tier4', 'Free_Upgrade_Voucher_auto_generator.html')">🎨 Создать</button>
+                </div>
+                <div class="voucher-card">
+                    <h3>Chauffeur Service Voucher (6h)</h3>
+                    <p>Автогенератор: Chauffeur_Service_Voucher__6h__auto_generator.html</p>
+                    <button onclick="openGenerator('tier4', 'Chauffeur_Service_Voucher__6h__auto_generator.html')">🎨 Создать</button>
+                </div>
+                <div class="voucher-card">
+                    <h3>Free UAE Delivery Voucher</h3>
+                    <p>Автогенератор: Free_UAE_Delivery_Voucher_auto_generator.html</p>
+                    <button onclick="openGenerator('tier4', 'Free_UAE_Delivery_Voucher_auto_generator.html')">🎨 Создать</button>
+                </div>
+                <div class="voucher-card">
+                    <h3>Frame 1686560878</h3>
+                    <p>Автогенератор: Frame_1686560878_auto_generator.html</p>
+                    <button onclick="openGenerator('tier4', 'Frame_1686560878_auto_generator.html')">🎨 Создать</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openGenerator(tier, filename) {
+            const url = `public/assets/${tier}/${filename}`;
+            window.open(url, '_blank');
+        }
+        
+        function generateByTier(tier) {
+            const tierMap = {
+                'BRONZE': ['1_hour_Free_Rental_Voucher_auto_generator.html', '1_hour_Free_Rental_Voucher_1_auto_generator.html', '10__Restaurant_Discount_auto_generator.html', '10__Auto_Service_Discount_auto_generator.html'],
+                'SILVER': ['2_hours_Free_Rental_Voucher_auto_generator.html', '150__Rental_Voucher_auto_generator.html', '15__Auto_Service_Discount_auto_generator.html', '10__Restaurant_Discount_auto_generator.html', 'Free_Car_Wash_Voucher_auto_generator.html', 'Free_Upgrade_Voucher_auto_generator.html', 'Frame_1686560875_auto_generator.html'],
+                'GOLD': ['3_hours_Free_Rental_Voucher_auto_generator.html', '600__Rental_Voucher_auto_generator.html', '20__Auto_Service_Discount_auto_generator.html', '15__Restaurant_Discount_auto_generator.html', 'Unlimited_Mileage_auto_generator.html', 'Premium_Protection_auto_generator.html', 'Free_Car_Wash_Voucher_auto_generator.html', 'Free_Upgrade_Voucher_auto_generator.html', 'Frame_1686560876_auto_generator.html'],
+                'PLATINUM': ['5_hours_Free_Rental_Voucher_auto_generator.html', '1250__Rental_Voucher_auto_generator.html', '20__Auto_Service_Discount_auto_generator.html', '20__Restaurant_Discount_auto_generator.html', 'Unlimited_Mileage_auto_generator.html', 'Premium_Protection_auto_generator.html', 'Free_Car_Wash_Voucher_auto_generator.html', 'Free_Upgrade_Voucher_auto_generator.html', 'Chauffeur_Service_Voucher__6h__auto_generator.html', 'Free_UAE_Delivery_Voucher_auto_generator.html', 'Frame_1686560878_auto_generator.html']
+            };
+            
+            const tierFolder = tier === 'BRONZE' ? 'tier1' : tier === 'SILVER' ? 'tier2' : tier === 'GOLD' ? 'tier3' : 'tier4';
+            const files = tierMap[tier];
+            
+            files.forEach((file, index) => {
+                setTimeout(() => {
+                    openGenerator(tierFolder, file);
+                }, index * 500);
+            });
+        }
+        
+        function generateAll() {
+            const allFiles = [
+                { tier: 'tier1', files: ['1_hour_Free_Rental_Voucher_auto_generator.html', '1_hour_Free_Rental_Voucher_1_auto_generator.html', '10__Restaurant_Discount_auto_generator.html', '10__Auto_Service_Discount_auto_generator.html'] },
+                { tier: 'tier2', files: ['2_hours_Free_Rental_Voucher_auto_generator.html', '150__Rental_Voucher_auto_generator.html', '15__Auto_Service_Discount_auto_generator.html', '10__Restaurant_Discount_auto_generator.html', 'Free_Car_Wash_Voucher_auto_generator.html', 'Free_Upgrade_Voucher_auto_generator.html', 'Frame_1686560875_auto_generator.html'] },
+                { tier: 'tier3', files: ['3_hours_Free_Rental_Voucher_auto_generator.html', '600__Rental_Voucher_auto_generator.html', '20__Auto_Service_Discount_auto_generator.html', '15__Restaurant_Discount_auto_generator.html', 'Unlimited_Mileage_auto_generator.html', 'Premium_Protection_auto_generator.html', 'Free_Car_Wash_Voucher_auto_generator.html', 'Free_Upgrade_Voucher_auto_generator.html', 'Frame_1686560876_auto_generator.html'] },
+                { tier: 'tier4', files: ['5_hours_Free_Rental_Voucher_auto_generator.html', '1250__Rental_Voucher_auto_generator.html', '20__Auto_Service_Discount_auto_generator.html', '20__Restaurant_Discount_auto_generator.html', 'Unlimited_Mileage_auto_generator.html', 'Premium_Protection_auto_generator.html', 'Free_Car_Wash_Voucher_auto_generator.html', 'Free_Upgrade_Voucher_auto_generator.html', 'Chauffeur_Service_Voucher__6h__auto_generator.html', 'Free_UAE_Delivery_Voucher_auto_generator.html', 'Frame_1686560878_auto_generator.html'] }
+            ];
+            
+            let fileIndex = 0;
+            allFiles.forEach(tierData => {
+                tierData.files.forEach(file => {
+                    setTimeout(() => {
+                        openGenerator(tierData.tier, file);
+                    }, fileIndex * 300);
+                    fileIndex++;
+                });
+            });
+        }
+    </script>
+</body>
+</html>

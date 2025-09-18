@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Voucher Scanner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #1a1a1a;
+            color: white;
+        }
+        .container {
+            background: #2a2a2a;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #ccc;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #555;
+            border-radius: 5px;
+            background: #333;
+            color: white;
+            font-size: 14px;
+        }
+        button {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-right: 10px;
+        }
+        button:hover {
+            background: #059669;
+        }
+        button:disabled {
+            background: #666;
+            cursor: not-allowed;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #555;
+        }
+        .success {
+            background: #064e3b;
+            border-color: #10b981;
+        }
+        .error {
+            background: #7f1d1d;
+            border-color: #ef4444;
+        }
+        .voucher-info {
+            background: #374151;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .qr-code {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .qr-code img {
+            border: 1px solid #555;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎫 Test Voucher Scanner</h1>
+    
+    <div class="container">
+        <h2>QR Code Scanner</h2>
+        <div class="input-group">
+            <label for="qrCode">QR Code:</label>
+            <textarea id="qrCode" rows="3" placeholder="Enter QR code here..."></textarea>
+        </div>
+        
+        <button onclick="checkVoucher()">Check Voucher</button>
+        <button onclick="redeemVoucher()">Redeem Voucher</button>
+        <button onclick="generateTestQR()">Generate Test QR</button>
+        
+        <div id="result"></div>
+    </div>
+
+    <div class="container">
+        <h2>Test QR Codes</h2>
+        <p>Use these test QR codes for testing:</p>
+        <ul>
+            <li><code>PADD_VOUCHER_1_0x513756b7eD711c472537cb497833c5d5Eb02A3Df_1_1694323200</code></li>
+            <li><code>PADD_VOUCHER_2_0x513756b7eD711c472537cb497833c5d5Eb02A3Df_1_1694323200</code></li>
+            <li><code>PADD_VOUCHER_3_0x513756b7eD711c472537cb497833c5d5Eb02A3Df_1_1694323200</code></li>
+        </ul>
+    </div>
+
+    <script>
+        function generateTestQR() {
+            const testQR = "PADD_VOUCHER_1_0x513756b7eD711c472537cb497833c5d5Eb02A3Df_1_1694323200";
+            document.getElementById('qrCode').value = testQR;
+        }
+
+        async function checkVoucher() {
+            const qrCode = document.getElementById('qrCode').value.trim();
+            const resultDiv = document.getElementById('result');
+            
+            if (!qrCode) {
+                showResult('Please enter a QR code', 'error');
+                return;
+            }
+
+            try {
+                showResult('Checking voucher...', 'info');
+                
+                // Simulate API call to check voucher
+                const response = await fetch('/api/admin/check-voucher', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ qrCode: qrCode })
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    showVoucherInfo(data);
+                } else {
+                    const error = await response.json();
+                    showResult(`Error: ${error.message}`, 'error');
+                }
+            } catch (error) {
+                showResult(`Network error: ${error.message}`, 'error');
+            }
+        }
+
+        async function redeemVoucher() {
+            const qrCode = document.getElementById('qrCode').value.trim();
+            const resultDiv = document.getElementById('result');
+            
+            if (!qrCode) {
+                showResult('Please enter a QR code', 'error');
+                return;
+            }
+
+            try {
+                showResult('Redeeming voucher...', 'info');
+                
+                // Simulate API call to redeem voucher
+                const response = await fetch('/api/admin/redeem-voucher', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ qrCode: qrCode })
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    showResult(`✅ Voucher redeemed successfully!`, 'success');
+                } else {
+                    const error = await response.json();
+                    showResult(`Error: ${error.message}`, 'error');
+                }
+            } catch (error) {
+                showResult(`Network error: ${error.message}`, 'error');
+            }
+        }
+
+        function showResult(message, type) {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `<div class="result ${type}">${message}</div>`;
+        }
+
+        function showVoucherInfo(voucher) {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `
+                <div class="result success">
+                    <h3>✅ Voucher Found</h3>
+                    <div class="voucher-info">
+                        <p><strong>Name:</strong> ${voucher.name}</p>
+                        <p><strong>Description:</strong> ${voucher.description}</p>
+                        <p><strong>Value:</strong> ${voucher.value}</p>
+                        <p><strong>Type:</strong> ${voucher.type}</p>
+                        <p><strong>Status:</strong> ${voucher.isActive ? 'Active' : 'Inactive'}</p>
+                        <p><strong>Uses:</strong> ${voucher.currentUses}/${voucher.maxUses}</p>
+                    </div>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>

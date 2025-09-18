@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NFT Video Test - All Tiers</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 20px; 
+            background: #1a1a1a; 
+            color: white; 
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .nft-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 20px; 
+            margin: 20px 0; 
+        }
+        .nft-card { 
+            border: 1px solid #333; 
+            border-radius: 12px; 
+            overflow: hidden; 
+            background: #2a2a2a;
+            transition: transform 0.2s;
+        }
+        .nft-card:hover { transform: translateY(-5px); }
+        .video-container { 
+            position: relative; 
+            width: 100%; 
+            height: 200px; 
+            background: #000; 
+        }
+        video { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+        }
+        .tier-badge { 
+            position: absolute; 
+            top: 10px; 
+            left: 10px; 
+            padding: 5px 10px; 
+            border-radius: 20px; 
+            font-weight: bold; 
+            font-size: 12px;
+        }
+        .bronze { background: #CD7F32; }
+        .silver { background: #C0C0C0; color: #000; }
+        .gold { background: #FFD700; color: #000; }
+        .platinum { background: #E5E4E2; color: #000; }
+        .nft-info { padding: 15px; }
+        .nft-title { font-size: 18px; font-weight: bold; margin-bottom: 5px; }
+        .nft-description { color: #ccc; font-size: 14px; margin-bottom: 10px; }
+        .nft-actions { display: flex; gap: 10px; }
+        .btn { 
+            padding: 8px 16px; 
+            border: 1px solid #555; 
+            background: #333; 
+            color: white; 
+            border-radius: 6px; 
+            cursor: pointer; 
+            text-decoration: none;
+            font-size: 12px;
+        }
+        .btn:hover { background: #444; }
+        .status { 
+            padding: 10px; 
+            margin: 10px 0; 
+            border-radius: 6px; 
+            text-align: center;
+        }
+        .success { background: #1a4d1a; border: 1px solid #2d5a2d; }
+        .error { background: #4d1a1a; border: 1px solid #5a2d2d; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎬 NFT Video Test - All Tiers</h1>
+        <p>Testing video display for all NFT tiers in personal account</p>
+        
+        <div id="status" class="status" style="display: none;"></div>
+        
+        <div class="nft-grid" id="nft-grid">
+            <!-- NFTs will be loaded here -->
+        </div>
+    </div>
+    
+    <script>
+        const nftData = [
+            {
+                tokenId: '1',
+                tier: 'Bronze',
+                tierClass: 'bronze',
+                description: 'Staking reward NFT for Bronze tier',
+                videoUrl: '/api/nft-video-file?tokenId=1'
+            },
+            {
+                tokenId: '2', 
+                tier: 'Silver',
+                tierClass: 'silver',
+                description: 'Staking reward NFT for Silver tier',
+                videoUrl: '/api/nft-video-file?tokenId=2'
+            },
+            {
+                tokenId: '3',
+                tier: 'Gold', 
+                tierClass: 'gold',
+                description: 'Staking reward NFT for Gold tier',
+                videoUrl: '/api/nft-video-file?tokenId=3'
+            },
+            {
+                tokenId: '4',
+                tier: 'Platinum',
+                tierClass: 'platinum', 
+                description: 'Staking reward NFT for Platinum tier',
+                videoUrl: '/api/nft-video-file?tokenId=4'
+            }
+        ];
+        
+        function showStatus(message, type) {
+            const status = document.getElementById('status');
+            status.textContent = message;
+            status.className = `status ${type}`;
+            status.style.display = 'block';
+        }
+        
+        function createNFTCard(nft) {
+            const card = document.createElement('div');
+            card.className = 'nft-card';
+            
+            card.innerHTML = `
+                <div class="video-container">
+                    <video controls preload="metadata">
+                        <source src="${nft.videoUrl}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="tier-badge ${nft.tierClass}">${nft.tier}</div>
+                </div>
+                <div class="nft-info">
+                    <div class="nft-title">PADD-R Staking NFT #${nft.tokenId}</div>
+                    <div class="nft-description">${nft.description}</div>
+                    <div class="nft-actions">
+                        <button class="btn" onclick="copyToClipboard('${nft.tokenId}')">Copy ID</button>
+                        <a class="btn" href="https://sepolia.etherscan.io/token/0x6D87c4647bd91743ce69d8cd2eD568A6d892cd33?a=${nft.tokenId}" target="_blank">View</a>
+                    </div>
+                </div>
+            `;
+            
+            return card;
+        }
+        
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text);
+            showStatus(`Token ID ${text} copied to clipboard!`, 'success');
+        }
+        
+        function loadNFTs() {
+            const grid = document.getElementById('nft-grid');
+            grid.innerHTML = '';
+            
+            nftData.forEach(nft => {
+                const card = createNFTCard(nft);
+                grid.appendChild(card);
+            });
+            
+            showStatus(`Loaded ${nftData.length} NFT videos successfully!`, 'success');
+        }
+        
+        // Load NFTs when page loads
+        loadNFTs();
+    </script>
+</body>
+</html>
